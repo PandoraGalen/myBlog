@@ -1,0 +1,24 @@
+<%- include header %>
+
+    <div class="content">
+        <div class="posts">
+            <article class="post">
+                <div class="post-inner">
+                    <h3 class="archive-title title"> 笔记存档</h3>
+                    <ul class="posts-archive-list">
+                        <% posts.forEach(function (post, index) { %>
+                          <li>
+                                <span>
+                                    <a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a>
+                                </span>
+
+                                <span> <%= post.time.minute %> </span>
+                          </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+
+<%- include footer %>

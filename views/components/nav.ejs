@@ -1,0 +1,24 @@
+<nav class="navigation">
+    <div class="navigation-inner section-inner">
+        <ul class="ul-menu">
+            <li><a href="/">首页</a></li>
+            <li><a href="/archive">存档</a></li>
+            <li><a href="/tags">标签</a></li>
+            <% if (user) { %>
+                <li><a title="发表" href="/post">写新文章</a></li>
+                <li><a title="上传" href="/upload">上传</a></li>
+                <li><a title="登出" href="/logout">登出</a></li>
+            <% } else { %>
+                <li><a title="登录" href="/login">登录</a></li>
+                <li><a title="注册" href="/reg">注册</a></li>
+            <% } %>
+        </ul>
+
+        <form action="/search" method="GET" class="search-form">
+            <input type="text" value="输入并回车" onfocus="if(this.value=='输入并回车')this.value='';" onblur="if(this.value=='')this.value='输入并回车';" name="keyword" id="s">
+            <input type="submit" id="searchsubmit" value="搜索" class="button hidden">
+            <div class="clear"></div>
+        </form>
+        <div class="clear"></div>
+    </div>
+</nav>

@@ -1,0 +1,147 @@
+
+<footer class="footer section">
+    <div class="footer-inner section-inner">
+        <div class="footer-a widgets">
+            <div class="widget widget_categories">
+                <div class="widget-content">
+                    <h3 class="widget-title">前端学习站点(国内)</h3>
+                    <ul>
+                        <li class="cat-item cat-item-1"><a href="http://www.jianshu.com/">简书</a></li>
+                        <li class="cat-item cat-item-1"><a href="http://1ke.co/">1ke</a></li>
+                        <li class="cat-item cat-item-5"><a href="http://www.fenby.com/">fenby</a></a></li>
+                        <li class="cat-item cat-item-3"><a href="https://segmentfault.com/">SegmentFault</a></li>
+                        <li class="cat-item cat-item-6"><a href="http://study.163.com/">网易云课堂</a></li>
+                        <li class="cat-item cat-item-4"><a href="https://www.shiyanlou.com/">实验楼</a></li>
+                        <li class="cat-item cat-item-1"><a href="http://mooc.guokr.com/course/">果壳MOOC学院</a></li>
+                        <li class="cat-item cat-item-1"><a href="http://www.w3school.com.cn/">w3c菜鸟教程</a></li>
+                        <li class="cat-item cat-item-1"><a href="http://geek.csdn.net/">极客头条</a></li>
+                        <li class="cat-item cat-item-1"><a href="http://www.imooc.com/course/list">幕课网</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer-b widgets">
+            <div class="widget widget_recent_entries">
+                <div class="widget-content">
+                    <h3 class="widget-title">前端学习站点(国外)</h3>
+                    <ul>
+                        <li><a href="https://www.codeschool.com/">Code School</a></li>
+                        <li><a href="http://www.codecademy.com">Codecademy</a></li>
+                        <li><a href="http://codepen.io/">Codepen</a></li>
+                        <li><a href="http://thecodeplayer.com/">thecodeplayer</a></li>
+                        <li><a href="http://aptusource.org/">aptusource</a></li>
+                        <li><a href="https://www.coursera.org/">coursera</a></li>
+                        <li><a href="https://www.khanacademy.org/">可汗学院</a></li>
+                        <li><a href="http://cssdeck.com/">cssdeck</a></li>
+                        <li><a href="https://css-tricks.com/">css-tricks</a></li>
+                        <li><a href="https://www.edx.org/">edx</a></li>
+                        <li><a href="https://udacity.com/">udacity</a></li>
+                        <li><a href="https://www.udemy.com/">udemy</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+
+        <div class="footer-c widgets">
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</footer>
+
+<div class="credits section">
+    <div class="credits-inner section-inner">
+        <p class="credits-left">
+            <span>Copyright</span> © 2017 <a href="#" title="Slax">Dragon.G</a> g.dragon132900@gmail.com
+        </p>
+
+        <p class="credits-right">
+            <span>Make by <a href="#">Pandora Dragon.G</a> — </span>
+            <a title="返回顶部" class="tothetop">顶部 ↑</a>
+        </p>
+        <div class="clear"></div>
+    </div>
+    <!-- /credits-inner -->
+</div>
+
+<!-- =============================== SCRIPT =========================================== -->
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.expressjs.com.cn/js/prism.js"></script>
+<script src="https://cdn.bootcss.com/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://github.com/jquery-archive/jquery-metadata/blob/master/jquery.metadata.js"></script>
+<script src="./javascript/jquery.metadata.js" type="text/javascript"></script>
+<script src="./javascript/message_cn.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function() {
+        // toggle blog-menu
+        $(".nav-toggle").on("click", function() {
+            $(this).toggleClass("active");
+            $(".navigation").slideToggle(function() {
+                $(".navigation").css('overflow', 'visible');
+            });
+            return false;
+        });
+
+        // Smooth scroll to the top
+        $('.tothetop').click(function() {
+            $("html, body").animate({
+                  scrollTop: 0
+            }, 500);
+            return false;
+        });
+
+        $('code').addClass('language-javascript').css("fontSize", "14px");
+
+        // =====================================================================
+        $("#signupForm").validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 6,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                name: "用户名不能为空",
+                email: {
+                    required: "请输入Email地址",
+                    email: "请输入正确的email地址"
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: jQuery.validator.format("密码不能小于{0}个字 符")
+                },
+                confirm_password: {
+                    required: "请输入确认密码",
+                    minlength: "确认密码不能小于6个字符",
+                    equalTo: "两次输入密码不一致不一致"
+                }
+            }
+        });
+        // ===========================================================================
+
+
+
+    });
+</script>
+</body>
+
+</html>

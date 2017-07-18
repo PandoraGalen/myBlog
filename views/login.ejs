@@ -1,0 +1,26 @@
+<%- include header %>
+
+    <div class="content">
+        <div class="posts">
+            <article class="post">
+                <div class="post-inner">
+                    <h2 style="text-align:center;"　class="title">　登　录　</h2>
+                    <form method="post" id="signupForm">
+                        <p>
+                            <label for="name">用户名：</label>
+                            <input type="text" name="name" id="name" class="required"/>
+                        </p>
+
+                        <p>
+                            <label for="password">密码：</label>
+                            <input type="password" name="password" id="password" class="{required:true}"/>
+                        </p>
+
+                        <input type="submit" value="登录" />
+                    </form>
+                </div>
+            </article>
+        </div>
+    </div>
+
+<%- include footer %>

@@ -1,0 +1,17 @@
+<%- include header %>
+
+    <div class="content">
+        <div class="posts">
+            <article class="post">
+                <div class="post-inner tags-inner">
+                    <% posts.forEach(function (tag, index) { %>
+                        <a class="tag" href="/tags/<%= tag %>">
+                            <%= tag %>
+                        </a>
+                    <% }) %>
+                </div>
+            </article>
+        </div>
+    </div>
+
+<%- include footer %>

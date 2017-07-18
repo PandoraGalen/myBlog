@@ -1,0 +1,28 @@
+<%- include header %>
+
+    <div class="content">
+        <div class="posts">
+            <article class="post">
+                <div class="post-inner tags-inner">
+                    <ul class="archive">
+                        <% var lastYear = 0 %>
+                        <% posts.forEach(function (post, index) { %>
+                              <% if (lastYear != post.time.year) { %>
+                                  <li>
+                                      <h3　class="years"><%= post.time.year %></h3>
+                                  </li>
+                              <% lastYear = post.time.year } %>
+                                  <li>
+                                    　<time><%= post.time.day %></time>
+                                      <a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
+                                            <%= post.title %>
+                                      </a>
+                                  </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+
+<%- include footer %>

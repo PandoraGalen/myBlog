@@ -1,0 +1,30 @@
+<%- include header %>
+
+    <div class="content">
+        <div class="posts">
+            <article class="post">
+                <div class="post-inner">
+                    <h2 style="text-align:center" class="title">　发表文章　</h2>
+                    <form method="post">
+                        <label for="">标　题：</label>
+                        <br>
+                        <input type="text" name="title" /><br />
+
+                        <label>标签：</label>
+                        <br />
+                        <input type="text" name="tag1" placeholder="标签１" />
+                        <input type="text" name="tag2" placeholder="标签１" />
+                        <input type="text" name="tag3" placeholder="标签１" />
+                        <br />
+
+                        <label for=""> 正　文：</label>
+                        <br>
+                        <textarea name="post" rows="20" cols="100"></textarea><br />
+                        <input type="submit" value="发表" />
+                    </form>
+                </div>
+            </article>
+        </div>
+    </div>
+
+<%- include footer %>
